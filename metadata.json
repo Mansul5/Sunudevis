@@ -1,0 +1,6 @@
+{
+  "name": "Devis Sénégal Pro",
+  "description": "Application mobile-first de création de devis professionnels pour commerçants et PME au Sénégal avec logo, export PDF, et envoi direct WhatsApp & Email.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
