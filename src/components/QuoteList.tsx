@@ -370,12 +370,12 @@ export const QuoteList: React.FC<QuoteListProps> = ({
               </div>
 
               {/* Card Action Buttons */}
-              <div className="pt-2 border-t border-slate-100 flex flex-wrap items-center justify-between gap-1.5">
-                <div className="flex items-center gap-1.5">
+              <div className="pt-2 border-t border-slate-100 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+                <div className="flex flex-col gap-1.5 sm:flex-row sm:items-center">
                   {/* WhatsApp share */}
                   <button
                     onClick={() => setActiveShareQuote(quote)}
-                    className="inline-flex items-center gap-1 px-2.5 py-1 bg-green-500 hover:bg-green-600 active:bg-green-700 text-white font-bold text-xs rounded-lg transition shadow-sm"
+                    className="inline-flex items-center justify-center gap-1 px-2.5 py-1.5 bg-green-500 hover:bg-green-600 active:bg-green-700 text-white font-bold text-xs rounded-lg transition shadow-sm w-full sm:w-auto"
                   >
                     <MessageSquare className="w-3 h-3" />
                     <span>WhatsApp</span>
@@ -384,14 +384,14 @@ export const QuoteList: React.FC<QuoteListProps> = ({
                   {/* Edit / View */}
                   <button
                     onClick={() => onEditQuote(quote)}
-                    className="inline-flex items-center gap-1 px-2.5 py-1 bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs rounded-lg transition"
+                    className="inline-flex items-center justify-center gap-1 px-2.5 py-1.5 bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs rounded-lg transition w-full sm:w-auto"
                   >
                     <Eye className="w-3 h-3" />
                     <span>Ouvrir / PDF</span>
                   </button>
                 </div>
 
-                <div className="flex items-center gap-0.5">
+                <div className="flex items-center justify-end gap-0.5">
                   {/* Duplicate */}
                   <button
                     onClick={() => handleAttemptDuplicate(quote)}

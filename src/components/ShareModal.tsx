@@ -65,8 +65,8 @@ export const ShareModal: React.FC<ShareModalProps> = ({
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm overflow-y-auto">
-      <div className="bg-white rounded-2xl max-w-md w-full p-5 shadow-2xl border border-slate-100 my-8 space-y-3.5">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-slate-900/60 backdrop-blur-sm overflow-y-auto">
+      <div className="bg-white rounded-2xl max-w-md w-full max-w-[calc(100vw-1.5rem)] p-4 sm:p-5 shadow-2xl border border-slate-100 my-6 space-y-3.5">
         {/* Header */}
         <div className="flex items-center justify-between pb-3 border-b border-slate-100">
           <div className="flex items-center gap-2.5">
@@ -96,7 +96,7 @@ export const ShareModal: React.FC<ShareModalProps> = ({
           <button
             id="btn-modal-whatsapp"
             onClick={handleOpenWhatsApp}
-            className="flex items-center justify-center gap-2 p-2.5 rounded-xl bg-green-500 hover:bg-green-600 active:bg-green-700 text-white font-bold text-xs transition shadow-sm"
+            className="flex min-h-[42px] items-center justify-center gap-2 p-2.5 rounded-xl bg-green-500 hover:bg-green-600 active:bg-green-700 text-white font-bold text-[11px] transition shadow-sm"
           >
             <MessageSquare className="w-4 h-4" />
             <span>WhatsApp</span>
@@ -107,7 +107,7 @@ export const ShareModal: React.FC<ShareModalProps> = ({
             id="btn-modal-pdf"
             onClick={onDownloadPDF}
             disabled={isGeneratingPDF}
-            className="flex items-center justify-center gap-2 p-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 active:bg-black text-white font-bold text-xs transition shadow-sm disabled:opacity-50"
+            className="flex min-h-[42px] items-center justify-center gap-2 p-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 active:bg-black text-white font-bold text-[11px] transition shadow-sm disabled:opacity-50"
           >
             <Download className="w-4 h-4" />
             <span>{isGeneratingPDF ? 'Création...' : 'Télécharger PDF'}</span>
@@ -117,7 +117,7 @@ export const ShareModal: React.FC<ShareModalProps> = ({
           <button
             id="btn-modal-email"
             onClick={handleOpenEmail}
-            className="flex items-center justify-center gap-2 p-2 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold text-xs transition"
+            className="flex min-h-[42px] items-center justify-center gap-2 p-2 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold text-[11px] transition"
           >
             <Mail className="w-3.5 h-3.5 text-slate-600" />
             <span>E-mail</span>
@@ -136,7 +136,7 @@ export const ShareModal: React.FC<ShareModalProps> = ({
           ) : (
             <button
               onClick={handleCopy}
-              className="flex items-center justify-center gap-2 p-2 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold text-xs transition"
+              className="flex min-h-[42px] items-center justify-center gap-2 p-2 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold text-[11px] transition"
             >
               <Copy className="w-3.5 h-3.5 text-slate-600" />
               <span>Copier Texte</span>

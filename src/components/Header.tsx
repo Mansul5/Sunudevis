@@ -22,23 +22,23 @@ export const Header: React.FC<HeaderProps> = ({
 
   return (
     <header className="sticky top-0 z-30 border-b border-slate-200 bg-white/90 backdrop-blur-xl">
-      <div className="mx-auto flex max-w-7xl items-center justify-between gap-2 px-3.5 py-2.5 sm:px-6">
-        <div className="flex items-center gap-3">
+      <div className="mx-auto flex max-w-7xl flex-col gap-2.5 px-3 py-2.5 sm:flex-row sm:items-center sm:justify-between sm:px-6">
+        <div className="flex items-center gap-3 min-w-0 flex-1">
           <div className="relative shrink-0">
-            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-emerald-500 via-emerald-600 to-emerald-700 text-white shadow-sm shadow-emerald-600/25 ring-4 ring-emerald-50">
-              <FileText className="h-5 w-5" />
+            <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-emerald-500 via-emerald-600 to-emerald-700 text-white shadow-sm shadow-emerald-600/25 ring-4 ring-emerald-50 sm:h-10 sm:w-10">
+              <FileText className="h-4 w-4 sm:h-5 sm:w-5" />
             </div>
             <div className="absolute -bottom-1 -right-1 flex h-4 w-4 items-center justify-center rounded-full border-2 border-white bg-amber-400 text-[9px] text-amber-950 shadow-sm">
               <CheckCheck className="h-2.5 w-2.5" />
             </div>
           </div>
 
-          <div>
-            <div className="flex items-center gap-2">
+          <div className="min-w-0">
+            <div className="flex items-center gap-1.5 sm:gap-2">
               <h1 className="text-sm font-black tracking-tight text-slate-900 sm:text-base">
                 SunuDevis
               </h1>
-              <span className="inline-flex items-center rounded-full border border-emerald-200 bg-emerald-50 px-1.5 py-0.5 text-[9px] font-black uppercase tracking-[0.12em] text-emerald-700">
+              <span className="inline-flex items-center rounded-full border border-emerald-200 bg-emerald-50 px-1.5 py-0.5 text-[8px] font-black uppercase tracking-[0.12em] text-emerald-700 sm:text-[9px]">
                 PRO
               </span>
               <span className="hidden items-center gap-1 rounded-full border border-slate-200 bg-slate-50 px-1.5 py-0.5 text-[9px] font-bold text-slate-600 sm:inline-flex">
@@ -52,7 +52,7 @@ export const Header: React.FC<HeaderProps> = ({
         </div>
 
         {/* Subscription & Action buttons */}
-        <div className="flex items-center gap-2">
+        <div className="flex items-center justify-end gap-2">
           {/* Pro / Free Plan Badge & Upgrade Button */}
           {isPro ? (
             <button

@@ -174,7 +174,7 @@ export const CompanySettings: React.FC<CompanySettingsProps> = ({
             <h3 className="font-bold text-slate-900 text-xs sm:text-sm">Identité Visuelle & Logo</h3>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 items-center">
+          <div className="grid grid-cols-1 gap-3 items-center sm:grid-cols-3">
             {/* Logo Upload Box */}
             <div className="sm:col-span-1">
               <label className="block text-[10px] font-bold text-slate-500 uppercase tracking-wider mb-1">
@@ -219,7 +219,7 @@ export const CompanySettings: React.FC<CompanySettingsProps> = ({
               <label className="block text-[10px] font-bold text-slate-500 uppercase tracking-wider">
                 Couleur principale des devis :
               </label>
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-1.5">
+              <div className="grid grid-cols-2 gap-1.5 sm:grid-cols-4">
                 {COLOR_PRESETS.map((color) => {
                   const isSelected = profile.themeColor === color.value;
                   return (
@@ -227,7 +227,7 @@ export const CompanySettings: React.FC<CompanySettingsProps> = ({
                       key={color.value}
                       type="button"
                       onClick={() => setProfile({ ...profile, themeColor: color.value })}
-                      className={`flex items-center gap-1.5 p-1.5 rounded-lg border text-[11px] font-bold transition ${
+                      className={`flex items-center gap-1.5 p-1.5 rounded-lg border text-[10px] sm:text-[11px] font-bold transition ${
                         isSelected
                           ? 'border-slate-900 bg-slate-50 shadow-sm'
                           : 'border-slate-200 hover:bg-slate-50 text-slate-600'

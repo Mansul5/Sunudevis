@@ -248,7 +248,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-800 flex flex-col antialiased">
+    <div className="min-h-screen bg-slate-50 text-slate-800 flex flex-col antialiased app-shell">
       {/* Top App Bar */}
       <Header
         activeTab={activeTab}
@@ -273,7 +273,7 @@ export default function App() {
       />
 
       {/* Main Content Area */}
-      <main className="flex-1 max-w-7xl w-full mx-auto p-4 sm:p-6 md:p-8">
+      <main className="flex-1 max-w-7xl w-full mx-auto px-3 py-3 sm:px-6 sm:py-4 md:px-8 md:py-6 pb-24 sm:pb-8">
         {/* Quotes List Tab */}
         {activeTab === 'quotes' && (
           <QuoteList
