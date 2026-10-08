@@ -22,6 +22,7 @@ import {
   getQuotesCreatedThisMonth,
   checkQuoteCreationAllowed,
   createBlankQuote,
+  DEFAULT_COMPANY,
 } from './utils/storage';
 import { Header } from './components/Header';
 import { Navigation } from './components/Navigation';
@@ -65,8 +66,32 @@ export default function App() {
 
   // Sync to local storage
   const handleSaveCompany = (updated: CompanyProfile) => {
+    const previousTheme = company.themeColor;
+
     setCompany(updated);
     saveCompanyProfile(updated);
+
+    if (updated.themeColor !== previousTheme) {
+      const syncedQuotes = quotes.map((quote) => {
+        const shouldSyncTheme =
+          !quote.themeColor ||
+          quote.themeColor === previousTheme ||
+          quote.themeColor === DEFAULT_COMPANY.themeColor;
+
+        if (!shouldSyncTheme) return quote;
+
+        return {
+          ...quote,
+          themeColor: updated.themeColor,
+        };
+      });
+
+      const hasChanged = syncedQuotes.some((quote, index) => quote.themeColor !== quotes[index].themeColor);
+      if (hasChanged) {
+        setQuotes(syncedQuotes);
+        saveQuotes(syncedQuotes);
+      }
+    }
   };
 
   const handleSaveQuotes = (updated: Quote[]) => {
