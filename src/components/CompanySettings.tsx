@@ -415,8 +415,8 @@ export const CompanySettings: React.FC<CompanySettingsProps> = ({
                 <div className="flex items-center justify-between gap-2 mb-1.5">
                   <div className="flex items-center gap-1.5 font-bold text-xs text-slate-800">
                     <span className="text-sm">
-                      {p.type === 'wave' && '🌊'}
-                      {p.type === 'orange_money' && '🍊'}
+                      {p.type === 'wave' && <img src="/logoWave.png" alt="Wave" className="w-4 h-4 object-contain" />}
+                      {p.type === 'orange_money' && <img src="/orangeMonney.png" alt="Orange Money" className="w-4 h-4 object-contain" />}
                       {p.type === 'free_money' && '🟢'}
                       {p.type === 'bank_transfer' && '🏦'}
                       {p.type === 'cash' && '💵'}

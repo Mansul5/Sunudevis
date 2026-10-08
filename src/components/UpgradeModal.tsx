@@ -49,8 +49,8 @@ export const UpgradeModal: React.FC<UpgradeModalProps> = ({
   const priceMonthly = 1000;
   const priceYearly = 10000;
   const currentPrice = billingCycle === 'monthly' ? priceMonthly : priceYearly;
-  const waveMerchantNumber = '77 654 32 10';
-  const omMerchantNumber = '78 123 45 67';
+  const waveMerchantNumber = '70 475 89 17';
+  const omMerchantNumber = '77 999 90 49';
 
   const handleCopyNumber = (num: string) => {
     navigator.clipboard.writeText(num.replace(/\s+/g, ''));
@@ -321,7 +321,7 @@ export const UpgradeModal: React.FC<UpgradeModalProps> = ({
                       : 'bg-white border border-slate-200 text-slate-700 hover:bg-slate-100'
                   }`}
                 >
-                  <span>🌊 Wave</span>
+                  <span className="flex items-center gap-1"><img src="/logoWave.png" alt="Wave" className="w-4 h-4 object-contain" />Wave</span>
                 </button>
                 <button
                   type="button"
@@ -332,7 +332,7 @@ export const UpgradeModal: React.FC<UpgradeModalProps> = ({
                       : 'bg-white border border-slate-200 text-slate-700 hover:bg-slate-100'
                   }`}
                 >
-                  <span>🍊 Orange Money</span>
+                  <span className="flex items-center gap-1"><img src="/orangeMonney.png" alt="Orange Money" className="w-4 h-4 object-contain" />Orange Money</span>
                 </button>
               </div>
             </div>

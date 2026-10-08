@@ -1,3 +1,11 @@
+declare global {
+  namespace JSX {
+    interface IntrinsicElements {
+      [elementName: string]: any;
+    }
+  }
+}
+
 import React, { useState, useEffect } from 'react';
 import { Quote, CompanyProfile, Client, CatalogItem, QuoteStatus, Subscription } from './types';
 import {

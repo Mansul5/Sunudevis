@@ -212,8 +212,8 @@ export const QuotePreview: React.FC<QuotePreviewProps> = ({
                     {activePayments.map((p, idx) => (
                       <div key={idx} className="flex items-center justify-between bg-white p-2 rounded-lg border border-slate-100">
                         <span className="font-semibold text-slate-700">
-                          {p.type === 'wave' && '🌊 Wave :'}
-                          {p.type === 'orange_money' && '🍊 Orange Money :'}
+                          {p.type === 'wave' && <><img src="/logoWave.png" alt="Wave" className="inline-block w-4 h-4 object-contain mr-1 align-text-bottom" />Wave :</>}
+                          {p.type === 'orange_money' && <><img src="/orangeMonney.png" alt="Orange Money" className="inline-block w-4 h-4 object-contain mr-1 align-text-bottom" />Orange Money :</>}
                           {p.type === 'free_money' && '🟢 Free Money :'}
                           {p.type === 'bank_transfer' && '🏦 Virement :'}
                           {p.type === 'cash' && '💵 Espèces :'}
